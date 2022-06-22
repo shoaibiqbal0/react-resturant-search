@@ -6,8 +6,8 @@ const MainText = () => {
   const subheadingFontSizes = ["2em", "3em", "4em"];
   const imageSizes = ["10em", "15em", "19em"];
   return (
-    <VStack py="5em">
-      <Text fontSize={["5em", "6em", "7em"]} fontWeight="extrabold" mb="-5">
+    <VStack py="3em">
+      <Text fontSize={["4.5em", "6em", "7em"]} fontWeight="extrabold" mb="-5">
         WHERE
       </Text>
       <Text fontSize={subheadingFontSizes}>do you wanna</Text>

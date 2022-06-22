@@ -5,8 +5,8 @@ const SearchBar = () => {
   const handleClick = () => {};
 
   return (
-    <Flex justify="center">
-      <Flex p="5">
+    <Flex p="5" justify="center">
+      <Flex w="100%" maxW="40em">
         <Input
           placeholder="Search for resturants.."
           borderLeftRadius="full"

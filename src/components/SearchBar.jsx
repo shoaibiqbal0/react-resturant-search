@@ -20,7 +20,8 @@ const SearchBar = ({
   const handleSubmit = async (event) => {
     event.preventDefault();
     const results = await searchResturants("/businesses/search", {
-      location: "tooting",
+      term: searchTerm,
+      location: searchLocation,
     });
     setSearchResults(results);
     console.log(results);

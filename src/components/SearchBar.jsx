@@ -23,6 +23,7 @@ const SearchBar = ({
       location: "tooting",
     });
     setSearchResults(results);
+    console.log(results);
   };
 
   return (

@@ -17,8 +17,11 @@ const Main = () => {
         searchLocation={searchLocation}
         setSearchLocation={setSearchLocation}
       />
-      <MainText />
-      <SearchResults />
+      {Object.keys(searchResults).length === 0 ? (
+        <MainText />
+      ) : (
+        <SearchResults />
+      )}
     </>
   );
 };

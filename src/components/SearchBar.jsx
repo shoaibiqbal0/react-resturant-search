@@ -1,15 +1,28 @@
 import { Flex, IconButton, Input } from "@chakra-ui/react";
 import { FaSearch } from "react-icons/fa";
+import searchResturants from "../api/api";
 
-const SearchBar = ({ search, setSearch, searchResturants }) => {
+const SearchBar = ({
+  searchTerm,
+  setSearchTerm,
+  setSearchResults,
+  searchLocation,
+  setSearchLocation,
+}) => {
   const handleChange = (event) => {
-    const searchText = event.target.value;
-    setSearch(searchText);
+    setSearchTerm(event.target.value);
   };
 
-  const handleSubmit = (event) => {
+  const handleLocationChange = (event) => {
+    setSearchLocation(event.target.value);
+  };
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    searchResturants();
+    const results = await searchResturants("/businesses/search", {
+      location: "tooting",
+    });
+    setSearchResults(results);
   };
 
   return (
@@ -18,9 +31,15 @@ const SearchBar = ({ search, setSearch, searchResturants }) => {
         <Flex w="100%" maxW="40em">
           <Input
             onChange={handleChange}
-            value={search}
-            placeholder="Search for resturants.."
+            value={searchTerm}
+            placeholder="Search for?"
             borderLeftRadius="full"
+            variant="filled"
+          />
+          <Input
+            onChange={handleLocationChange}
+            value={searchLocation}
+            placeholder="Location.."
             variant="filled"
           />
           <IconButton

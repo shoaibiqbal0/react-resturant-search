@@ -37,12 +37,15 @@ const SearchBar = ({
             placeholder="Search for?"
             borderLeftRadius="full"
             variant="filled"
+            isRequired
           />
           <Input
             onChange={handleLocationChange}
             value={searchLocation}
             placeholder="Location.."
             variant="filled"
+            borderRadius="0"
+            isRequired
           />
           <IconButton
             type="submit"

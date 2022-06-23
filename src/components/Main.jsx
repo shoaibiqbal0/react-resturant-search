@@ -4,11 +4,13 @@ import SearchBar from "./SearchBar";
 import SearchResults from "./SearchResults";
 
 const Main = () => {
+  const apiKey = process.env.REACT_APP_API;
+  const baseUrl = "https://api.yelp.com/v3";
   const [search, setSearch] = useState("");
   const [searchResults, setSearchResults] = useState({});
 
   const searchResturants = () => {
-    console.log("This is the search resturants function!");
+    console.log();
   };
 
   return (

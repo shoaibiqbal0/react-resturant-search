@@ -1,4 +1,4 @@
-const SearchResults = () => {
+const SearchResults = ({ search }) => {
   return <></>;
 };
 

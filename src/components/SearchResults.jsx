@@ -8,6 +8,7 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
+import { AiFillStar } from "react-icons/ai";
 
 const SearchResults = ({ searchResults, searchTerm, searchLocation }) => {
   const badgeStyles = {
@@ -51,14 +52,17 @@ const SearchResults = ({ searchResults, searchTerm, searchLocation }) => {
                   {searchResults?.businesses[0]?.price}
                 </Text>
               </HStack>
-              <Text>
-                Rating:{" "}
+              <HStack spacing="0">
+                <Text fontSize="0.8em">
+                  <strong>Rating:</strong>
+                </Text>
                 {[
                   ...Array(Math.floor(searchResults?.businesses[0]?.rating)),
-                ].map((item) => {
-                  console.log(item);
+                ].map((item, index) => {
+                  return <AiFillStar color="orange" as="span" key={index} />;
                 })}
-              </Text>
+              </HStack>
+
               <Text pt="1" fontSize="0.8em">
                 <strong>Phone: </strong>
                 {searchResults?.businesses[0]?.phone}

@@ -1,13 +1,5 @@
-import {
-  Badge,
-  Box,
-  HStack,
-  Image,
-  SimpleGrid,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
-import { AiFillStar } from "react-icons/ai";
+import { SimpleGrid, Text, VStack } from "@chakra-ui/react";
+
 import ResultCard from "./ResultCard";
 
 const SearchResults = ({ searchResults, searchTerm, searchLocation }) => {

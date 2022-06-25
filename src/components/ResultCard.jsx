@@ -1,6 +1,6 @@
 import { Badge, Box, HStack, Image, Text, VStack } from "@chakra-ui/react";
 import React from "react";
-import { AiFillStar } from "react-icons/ai";
+import { AiFillPhone, AiFillStar } from "react-icons/ai";
 
 const ResultCard = ({ searchItem }) => {
   const badgeStyles = {
@@ -35,11 +35,14 @@ const ResultCard = ({ searchItem }) => {
               return <AiFillStar color="orange" as="span" key={index} />;
             })}
           </HStack>
-
-          <Text pt="1" fontSize="0.8em">
-            <strong>Phone: </strong>
-            {searchItem?.phone}
-          </Text>
+          <HStack pt="1">
+            <Text fontSize="0.8em">
+              <strong>Phone:</strong>
+            </Text>
+            <Text textDecor="underline" textColor="blue.500" fontSize="0.8em">
+              <a href={`tel:${searchItem?.phone}`}>{searchItem?.phone}</a>
+            </Text>
+          </HStack>
           <Text pt="1" fontSize="0.8em">
             <strong>Location: </strong>
             {searchItem?.location.address1}, {searchItem?.location.city}

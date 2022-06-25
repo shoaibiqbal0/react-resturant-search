@@ -17,15 +17,15 @@ const Main = () => {
         searchLocation={searchLocation}
         setSearchLocation={setSearchLocation}
       />
-      {/* {Object.keys(searchResults).length === 0 ? (
+      {Object.keys(searchResults).length === 0 ? (
         <MainText />
-      ) : ( */}
-      <SearchResults
-        searchTerm={searchTerm}
-        searchLocation={searchLocation}
-        searchResults={searchResults}
-      />
-      {/* )} */}
+      ) : (
+        <SearchResults
+          searchTerm={searchTerm}
+          searchLocation={searchLocation}
+          searchResults={searchResults}
+        />
+      )}
     </>
   );
 };

@@ -19,7 +19,7 @@ const SearchResults = ({ searchResults, searchTerm, searchLocation }) => {
   };
 
   return (
-    <VStack align="left" p="1" mx="2">
+    <VStack align="left" p="1" mx="1">
       <Text>
         Showing results for {searchTerm} in {searchLocation}
       </Text>
@@ -47,12 +47,12 @@ const SearchResults = ({ searchResults, searchTerm, searchLocation }) => {
                 <Badge style={badgeStyles}>
                   {searchResults?.businesses[0]?.categories[1]?.title}
                 </Badge>
-
                 <Text fontSize="0.6rem">
                   {searchResults?.businesses[0]?.price}
                 </Text>
               </HStack>
-              <HStack spacing="0">
+
+              <HStack pt="4" spacing="0">
                 <Text fontSize="0.8em">
                   <strong>Rating:</strong>
                 </Text>

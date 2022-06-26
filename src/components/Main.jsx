@@ -1,3 +1,4 @@
+import { Flex, Spinner } from "@chakra-ui/react";
 import { useState } from "react";
 import MainText from "./MainText";
 import SearchBar from "./SearchBar";
@@ -7,6 +8,7 @@ const Main = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchLocation, setSearchLocation] = useState("");
   const [searchResults, setSearchResults] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
 
   return (
     <>
@@ -16,7 +18,14 @@ const Main = () => {
         setSearchResults={setSearchResults}
         searchLocation={searchLocation}
         setSearchLocation={setSearchLocation}
+        isLoading={isLoading}
+        setIsLoading={setIsLoading}
       />
+      {isLoading ? (
+        <Flex justify="center">
+          <Spinner size="xl" />
+        </Flex>
+      ) : null}
       {Object.keys(searchResults).length === 0 ? (
         <MainText />
       ) : (

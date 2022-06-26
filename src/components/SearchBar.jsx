@@ -8,6 +8,8 @@ const SearchBar = ({
   setSearchResults,
   searchLocation,
   setSearchLocation,
+  isLoading,
+  setIsLoading,
 }) => {
   const handleChange = (event) => {
     setSearchTerm(event.target.value);
@@ -19,12 +21,13 @@ const SearchBar = ({
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setIsLoading(true);
     const results = await searchResturants("/businesses/search", {
       term: searchTerm,
       location: searchLocation,
     });
     setSearchResults(results);
-    console.log(results);
+    setIsLoading(false);
   };
 
   return (

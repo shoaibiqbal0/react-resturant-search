@@ -10,7 +10,16 @@ const ResultCard = ({ searchItem }) => {
     fontWeight: "normal",
   };
   return (
-    <Box borderRadius="5" border="1px" borderColor="gray.200" boxShadow="lg">
+    <Box
+      _hover={{
+        backgroundColor: "gray.50",
+        cursor: "pointer",
+      }}
+      borderRadius="5"
+      border="1px"
+      borderColor="gray.200"
+      boxShadow="lg"
+    >
       <HStack p="1" align="flex-start" py="2">
         <Image src={searchItem?.image_url} maxW="5em" borderRadius="5" />
         <VStack spacing="0" w="100%" align="left">

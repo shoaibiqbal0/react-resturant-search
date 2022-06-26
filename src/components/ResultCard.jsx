@@ -1,6 +1,6 @@
 import { Badge, Box, HStack, Image, Text, VStack } from "@chakra-ui/react";
 import React from "react";
-import { AiFillPhone, AiFillStar } from "react-icons/ai";
+import { AiFillStar } from "react-icons/ai";
 
 const ResultCard = ({ searchItem }) => {
   const badgeStyles = {

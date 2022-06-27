@@ -31,12 +31,13 @@ const Main = () => {
       <Collapse in={!isOpen} animateOpacity>
         <MainText />
       </Collapse>
-
-      <SearchResults
-        searchTerm={searchTerm}
-        searchLocation={searchLocation}
-        searchResults={searchResults}
-      />
+      {isOpen && (
+        <SearchResults
+          searchTerm={searchTerm}
+          searchLocation={searchLocation}
+          searchResults={searchResults}
+        />
+      )}
     </>
   );
 };

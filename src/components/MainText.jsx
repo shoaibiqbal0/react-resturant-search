@@ -4,7 +4,7 @@ import React from "react";
 const MainText = () => {
   const subheadingFontSizes = ["2em", "3em", "4em"];
   return (
-    <VStack py="3em">
+    <VStack py="1em">
       <Text fontSize={["4.5em", "6em", "7em"]} fontWeight="extrabold" mb="-5">
         WHERE
       </Text>

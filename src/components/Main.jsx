@@ -13,6 +13,10 @@ const Main = () => {
 
   return (
     <>
+      <Collapse in={!isOpen} animateOpacity>
+        <MainText />
+      </Collapse>
+
       <SearchBar
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
@@ -28,9 +32,6 @@ const Main = () => {
           <Spinner size="xl" />
         </Flex>
       ) : null}
-      <Collapse in={!isOpen} animateOpacity>
-        <MainText />
-      </Collapse>
       {isOpen && (
         <SearchResults
           searchTerm={searchTerm}

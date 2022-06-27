@@ -1,4 +1,4 @@
-import { Flex, Spinner } from "@chakra-ui/react";
+import { Collapse, Flex, Spinner, useDisclosure } from "@chakra-ui/react";
 import { useState } from "react";
 import MainText from "./MainText";
 import SearchBar from "./SearchBar";
@@ -9,6 +9,7 @@ const Main = () => {
   const [searchLocation, setSearchLocation] = useState("");
   const [searchResults, setSearchResults] = useState({});
   const [isLoading, setIsLoading] = useState(false);
+  const { isOpen, onToggle } = useDisclosure();
 
   return (
     <>
@@ -20,21 +21,22 @@ const Main = () => {
         setSearchLocation={setSearchLocation}
         isLoading={isLoading}
         setIsLoading={setIsLoading}
+        onToggle={onToggle}
       />
       {isLoading ? (
         <Flex justify="center">
           <Spinner size="xl" />
         </Flex>
       ) : null}
-      {Object.keys(searchResults).length === 0 ? (
+      <Collapse in={!isOpen} animateOpacity>
         <MainText />
-      ) : (
-        <SearchResults
-          searchTerm={searchTerm}
-          searchLocation={searchLocation}
-          searchResults={searchResults}
-        />
-      )}
+      </Collapse>
+
+      <SearchResults
+        searchTerm={searchTerm}
+        searchLocation={searchLocation}
+        searchResults={searchResults}
+      />
     </>
   );
 };

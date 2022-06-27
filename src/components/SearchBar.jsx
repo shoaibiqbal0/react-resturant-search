@@ -8,8 +8,8 @@ const SearchBar = ({
   setSearchResults,
   searchLocation,
   setSearchLocation,
-  isLoading,
   setIsLoading,
+  onToggle,
 }) => {
   const handleChange = (event) => {
     setSearchTerm(event.target.value);
@@ -28,6 +28,7 @@ const SearchBar = ({
     });
     setSearchResults(results);
     setIsLoading(false);
+    onToggle();
   };
 
   return (

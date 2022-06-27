@@ -9,7 +9,7 @@ const SearchResults = ({ searchResults, searchTerm, searchLocation }) => {
         Showing results for {searchTerm} in {searchLocation}
       </Text>
       <SimpleGrid columns={[1, null, 2]} gap="2">
-        {searchResults.businesses.map((searchItem, index) => {
+        {searchResults?.businesses?.map((searchItem, index) => {
           return <ResultCard key={index} searchItem={searchItem} />;
         })}
       </SimpleGrid>

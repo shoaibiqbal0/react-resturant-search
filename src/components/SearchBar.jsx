@@ -9,7 +9,7 @@ const SearchBar = ({
   searchLocation,
   setSearchLocation,
   setIsLoading,
-  onToggle,
+  onOpen,
 }) => {
   const handleChange = (event) => {
     setSearchTerm(event.target.value);
@@ -28,7 +28,7 @@ const SearchBar = ({
     });
     setSearchResults(results);
     setIsLoading(false);
-    onToggle();
+    onOpen();
   };
 
   return (

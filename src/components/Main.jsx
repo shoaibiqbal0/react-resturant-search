@@ -9,14 +9,13 @@ const Main = () => {
   const [searchLocation, setSearchLocation] = useState("");
   const [searchResults, setSearchResults] = useState({});
   const [isLoading, setIsLoading] = useState(false);
-  const { isOpen, onToggle } = useDisclosure();
+  const { isOpen, onOpen } = useDisclosure();
 
   return (
     <>
       <Collapse in={!isOpen} animateOpacity>
         <MainText />
       </Collapse>
-
       <SearchBar
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
@@ -25,7 +24,8 @@ const Main = () => {
         setSearchLocation={setSearchLocation}
         isLoading={isLoading}
         setIsLoading={setIsLoading}
-        onToggle={onToggle}
+        onOpen={onOpen}
+        isOpen={isOpen}
       />
       {isLoading ? (
         <Flex justify="center">

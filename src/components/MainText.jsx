@@ -6,9 +6,7 @@ const MainText = () => {
   return (
     <VStack py="1em">
       <Text
-        bgGradient={
-          "radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 100%)"
-        }
+        bgGradient="radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 100%)"
         bgClip="text"
         fontSize={["4.5em", "6em", "7em"]}
         fontWeight="extrabold"
@@ -16,7 +14,13 @@ const MainText = () => {
       >
         WHERE
       </Text>
-      <Text fontSize={subheadingFontSizes}>do you wanna</Text>
+      <Text
+        bgGradient="linear-gradient(to bottom right, red, yellow)"
+        bgClip="text"
+        fontSize={subheadingFontSizes}
+      >
+        do you wanna
+      </Text>
       <Text fontSize={subheadingFontSizes}>
         <strong>EAT</strong> today?
       </Text>

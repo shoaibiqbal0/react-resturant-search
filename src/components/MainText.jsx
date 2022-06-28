@@ -21,7 +21,11 @@ const MainText = () => {
       >
         do you wanna
       </Text>
-      <Text fontSize={subheadingFontSizes}>
+      <Text
+        bgGradient="radial-gradient(circle, rgba(142,8,79,1) 0%, rgba(255,0,172,1) 100%)"
+        bgClip="text"
+        fontSize={subheadingFontSizes}
+      >
         <strong>EAT</strong> today?
       </Text>
     </VStack>

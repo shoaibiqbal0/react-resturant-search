@@ -6,8 +6,6 @@ const MainText = () => {
   return (
     <VStack py="1em">
       <Text
-        bgGradient="radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 100%)"
-        bgClip="text"
         fontSize={["4.5em", "6em", "7em"]}
         fontWeight="extrabold"
         mb="-5"

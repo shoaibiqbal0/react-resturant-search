@@ -13,7 +13,9 @@ const MainText = () => {
       >
         WHERE
       </Text>
-      <Text fontSize={subheadingFontSizes}>do you wanna</Text>
+      <Text bgClip="text" fontSize={subheadingFontSizes}>
+        do you wanna
+      </Text>
       <Text fontSize={subheadingFontSizes}>
         <strong>EAT</strong> today?
       </Text>

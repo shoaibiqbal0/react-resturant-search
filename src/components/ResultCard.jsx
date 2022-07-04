@@ -18,7 +18,7 @@ const ResultCard = ({ searchItem }) => {
     fontWeight: "normal",
   };
   return (
-    <ScaleFade initialScale={0.9} in={true} whileHover={{ scale: 1.02 }}>
+    <ScaleFade initialScale={0.9} in={true} whileHover={{ scale: 1.01 }}>
       <Box
         _hover={{
           backgroundColor: "gray.50",

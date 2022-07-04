@@ -1,6 +1,7 @@
 import { Collapse, Flex, Spinner, useDisclosure } from "@chakra-ui/react";
 import { useState } from "react";
 import MainText from "./MainText";
+import NavBar from "./NavBar";
 import SearchBar from "./SearchBar";
 import SearchResults from "./SearchResults";
 
@@ -13,6 +14,7 @@ const Main = () => {
 
   return (
     <>
+      <NavBar />
       <Collapse in={!isOpen} animateOpacity>
         <MainText />
       </Collapse>

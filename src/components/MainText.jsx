@@ -1,7 +1,7 @@
 import { Text, VStack } from "@chakra-ui/react";
 import React from "react";
 
-import textBg from "../assets/textBg.png";
+import textBg from "../assets/text-bg.png";
 
 const MainText = () => {
   const subheadingFontSizes = ["2em", "3em", "4em"];

@@ -40,6 +40,7 @@ const SearchBar = ({
             value={searchTerm}
             placeholder="Search for?"
             variant="filled"
+            borderRadius="0"
             isRequired
           />
           <Input
@@ -50,7 +51,12 @@ const SearchBar = ({
             borderRadius="0"
             isRequired
           />
-          <IconButton type="submit" icon={<FaSearch />} size="md">
+          <IconButton
+            borderRadius="0"
+            type="submit"
+            icon={<FaSearch />}
+            size="md"
+          >
             Search
           </IconButton>
         </Flex>

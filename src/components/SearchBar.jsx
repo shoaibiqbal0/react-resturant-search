@@ -39,7 +39,6 @@ const SearchBar = ({
             onChange={handleChange}
             value={searchTerm}
             placeholder="Search for?"
-            borderLeftRadius="full"
             variant="filled"
             isRequired
           />
@@ -51,12 +50,7 @@ const SearchBar = ({
             borderRadius="0"
             isRequired
           />
-          <IconButton
-            type="submit"
-            icon={<FaSearch />}
-            borderRightRadius="full"
-            size="md"
-          >
+          <IconButton type="submit" icon={<FaSearch />} size="md">
             Search
           </IconButton>
         </Flex>

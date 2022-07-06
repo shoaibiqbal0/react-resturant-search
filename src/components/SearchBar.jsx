@@ -38,7 +38,7 @@ const SearchBar = ({
           <Input
             onChange={handleChange}
             value={searchTerm}
-            placeholder="Search for?"
+            placeholder="Search"
             variant="filled"
             borderRadius="0"
             isRequired
@@ -46,7 +46,7 @@ const SearchBar = ({
           <Input
             onChange={handleLocationChange}
             value={searchLocation}
-            placeholder="Location.."
+            placeholder="Location"
             variant="filled"
             borderRadius="0"
             isRequired

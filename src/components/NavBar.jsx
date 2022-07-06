@@ -6,10 +6,10 @@ const NavBar = () => {
   return (
     <Flex boxShadow="base">
       <HStack py="3" px="5">
-        <ScaleFade in={true} whileHover={{ scale: 1.1 }}>
+        <ScaleFade in={true} whileHover={{ scale: 1.2 }}>
           <Image
             _hover={{ cursor: "pointer" }}
-            w={["50%", "60%", "70%"]}
+            w={["40%", "50%", "60%"]}
             src={hamburger}
           />
         </ScaleFade>

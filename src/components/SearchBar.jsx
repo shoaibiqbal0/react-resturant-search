@@ -42,6 +42,7 @@ const SearchBar = ({
             variant="filled"
             borderRadius="0"
             isRequired
+            spellCheck="false"
           />
           <Input
             onChange={handleLocationChange}
@@ -50,6 +51,7 @@ const SearchBar = ({
             variant="filled"
             borderRadius="0"
             isRequired
+            spellCheck="false"
           />
           <IconButton
             borderRadius="0"

@@ -1,5 +1,5 @@
-import { Box, Button, Slide } from "@chakra-ui/react";
-import { GrClose } from "react-icons";
+import { Box, Button, IconButton, Slide } from "@chakra-ui/react";
+import { GrClose } from "react-icons/gr";
 import React from "react";
 
 const NavMenu = ({ isOpen, onToggle }) => {
@@ -14,7 +14,14 @@ const NavMenu = ({ isOpen, onToggle }) => {
           maxW="10rem"
           minH="100%"
         >
-          <Button onClick={onToggle}>Click Me</Button>
+          <IconButton
+            p="5"
+            icon={<GrClose />}
+            variant="link"
+            onClick={onToggle}
+          >
+            Click Me
+          </IconButton>
         </Box>
       </Slide>
     </>

@@ -17,6 +17,7 @@ const NavBar = () => {
         <HStack py="3" px="5">
           <ScaleFade in={true} whileHover={{ scale: 1.2 }}>
             <Image
+              onClick={onToggle}
               _hover={{ cursor: "pointer" }}
               w={["40%", "50%", "60%"]}
               src={hamburger}

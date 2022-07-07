@@ -4,16 +4,10 @@ import React from "react";
 const NavMenu = ({ isOpen, onToggle }) => {
   return (
     <>
-      <Slide direction="top" in={isOpen} style={{ zIndex: 10 }}>
-        <Button onClick={onToggle}>Click Me</Button>
-        <Box
-          p="40px"
-          color="white"
-          mt="4"
-          bg="teal.500"
-          rounded="md"
-          shadow="md"
-        ></Box>
+      <Slide direction="left" in={isOpen} style={{ zIndex: 10 }}>
+        <Box color="white" bg="teal.500" shadow="md" maxW="10rem" minH="100%">
+          <Button onClick={onToggle}>Click Me</Button>
+        </Box>
       </Slide>
     </>
   );

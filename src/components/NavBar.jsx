@@ -21,7 +21,7 @@ const NavBar = () => {
           icon={<Image w="70%" onClick={onToggle} m="-5" src={hamburger} />}
         />
         <Spacer />
-        <IconButton size="lg" icon={<FaSun size="50%" />} />
+        <IconButton icon={<FaSun />} />
       </HStack>
       <NavMenu isOpen={isOpen} onToggle={onToggle} />
     </>

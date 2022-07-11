@@ -5,6 +5,7 @@ import {
   Image,
   ScaleFade,
   Text,
+  useColorModeValue,
   VStack,
 } from "@chakra-ui/react";
 import React from "react";
@@ -17,11 +18,15 @@ const ResultCard = ({ searchItem }) => {
     textTransform: "capitalize",
     fontWeight: "normal",
   };
+  const hoverColor = useColorModeValue(
+    "hsla(0, 0%, 0%, 0.03)",
+    "hsla(0, 100%, 100%, 0.03)"
+  );
   return (
     <ScaleFade initialScale={0.9} in={true} whileHover={{ scale: 1.01 }}>
       <Box
         _hover={{
-          backgroundColor: "hsla(0, 50%, 98%, 0.5)",
+          backgroundColor: hoverColor,
           cursor: "pointer",
           borderRadius: "5",
         }}

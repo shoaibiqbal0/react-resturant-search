@@ -23,7 +23,10 @@ const NavBar = () => {
           icon={<Image w="70%" onClick={onToggle} m="-5" src={hamburger} />}
         />
         <Spacer />
-        <IconButton onClick={toggleColorMode} icon={<FaSun />} />
+        <IconButton
+          onClick={toggleColorMode}
+          icon={colorMode === "light" ? <FaSun /> : <FaMoon />}
+        />
       </HStack>
       <NavMenu isOpen={isOpen} onToggle={onToggle} />
     </>

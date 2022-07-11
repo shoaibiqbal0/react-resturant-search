@@ -21,12 +21,10 @@ const ResultCard = ({ searchItem }) => {
     <ScaleFade initialScale={0.9} in={true} whileHover={{ scale: 1.01 }}>
       <Box
         _hover={{
-          backgroundColor: "gray.50",
+          backgroundColor: "hsla(0, 50%, 98%, 0.5)",
           cursor: "pointer",
+          borderRadius: "5",
         }}
-        borderRadius="5"
-        border="1px"
-        borderColor="gray.200"
         boxShadow="lg"
       >
         <HStack p="1" align="flex-start" py="2">

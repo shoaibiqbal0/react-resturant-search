@@ -19,11 +19,13 @@ const NavBar = () => {
     <>
       <HStack py="3" px="5">
         <IconButton
+          variant="ghost"
           size="lg"
-          icon={<Image w="70%" onClick={onToggle} m="-5" src={hamburger} />}
+          icon={<Image w="80%" onClick={onToggle} m="-5" src={hamburger} />}
         />
         <Spacer />
         <IconButton
+          variant="ghost"
           onClick={toggleColorMode}
           icon={colorMode === "light" ? <FaSun /> : <FaMoon />}
         />

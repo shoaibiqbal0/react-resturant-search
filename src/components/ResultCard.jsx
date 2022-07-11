@@ -4,6 +4,7 @@ import {
   Button,
   HStack,
   Image,
+  Link,
   Text,
   VStack,
 } from "@chakra-ui/react";
@@ -12,7 +13,7 @@ import { AiFillStar } from "react-icons/ai";
 import emptyImg from "../assets/noimage.png";
 
 const ResultCard = ({ searchItem }) => {
-  "https://www.google.com/maps/place/56 The Market Sutton/@51.383233,-0.190163157672146";
+  const googleMapString = "https://www.google.com/maps/place/";
 
   const badgeStyles = {
     borderRadius: "7px",
@@ -66,7 +67,22 @@ const ResultCard = ({ searchItem }) => {
         </VStack>
       </HStack>
       <HStack justify="flex-end" p="2">
-        <Button as="a" colorScheme="blue" size="sm">
+        <Button
+          as="a"
+          href={
+            googleMapString +
+            searchItem?.location.address1 +
+            " " +
+            searchItem?.location.city +
+            "/@" +
+            searchItem?.coordinates.latitude +
+            "," +
+            searchItem?.coordinates.longitude
+          }
+          colorScheme="blue"
+          size="sm"
+          target="_blank"
+        >
           Map
         </Button>
         <Button

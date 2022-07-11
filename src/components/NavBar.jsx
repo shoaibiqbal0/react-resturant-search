@@ -16,18 +16,20 @@ const NavBar = () => {
   return (
     <>
       <HStack py="3" px="5">
-        <ScaleFade in={true} whileHover={{ scale: 1.2 }}>
-          <Image
-            onClick={onToggle}
-            _hover={{ cursor: "pointer" }}
-            w={["40%", "50%", "60%"]}
-            src={hamburger}
-          />
-        </ScaleFade>
+        <IconButton
+          size="lg"
+          icon={
+            <Image
+              w={["60%", "60%", "60%"]}
+              onClick={onToggle}
+              m="-5"
+              src={hamburger}
+            />
+          }
+        />
         <Spacer />
-        <IconButton size="sm" icon={<FaSun />}></IconButton>
+        <IconButton size="lg" icon={<FaSun />} />
       </HStack>
-
       <NavMenu isOpen={isOpen} onToggle={onToggle} />
     </>
   );

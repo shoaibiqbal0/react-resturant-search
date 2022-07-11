@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { AiFillStar } from "react-icons/ai";
+import emptyImg from "../assets/noimage.png";
 
 const ResultCard = ({ searchItem }) => {
   const badgeStyles = {
@@ -33,7 +34,11 @@ const ResultCard = ({ searchItem }) => {
         boxShadow="lg"
       >
         <HStack p="1" align="flex-start" py="2">
-          <Image src={searchItem?.image_url} maxW="5em" borderRadius="5" />
+          <Image
+            src={searchItem.image_url === "" ? emptyImg : searchItem.image_url}
+            maxW="5em"
+            borderRadius="5"
+          />
           <VStack spacing="0" w="100%" align="left">
             <Text w="100%" fontWeight="bold" fontSize="2xl">
               {searchItem?.name}

@@ -27,6 +27,7 @@ const SearchBar = ({
       location: searchLocation,
     });
     setSearchResults(results);
+    console.log(results);
     setIsLoading(false);
     onOpen();
   };

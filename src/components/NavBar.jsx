@@ -8,6 +8,7 @@ import {
 import React from "react";
 import hamburger from "../assets/hamburger.png";
 import NavMenu from "./NavMenu";
+import { FaSun, FaMoon } from "react-icons/fa";
 
 const NavBar = () => {
   const { isOpen, onToggle } = useDisclosure();

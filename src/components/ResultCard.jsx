@@ -4,7 +4,6 @@ import {
   Button,
   HStack,
   Image,
-  Link,
   Text,
   VStack,
 } from "@chakra-ui/react";

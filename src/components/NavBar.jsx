@@ -2,8 +2,8 @@ import {
   HStack,
   IconButton,
   Image,
-  ScaleFade,
   Spacer,
+  useColorMode,
   useDisclosure,
 } from "@chakra-ui/react";
 import React from "react";
@@ -13,6 +13,8 @@ import { FaSun, FaMoon } from "react-icons/fa";
 
 const NavBar = () => {
   const { isOpen, onToggle } = useDisclosure();
+  const { colorMode, toggleColorMode } = useColorMode();
+
   return (
     <>
       <HStack py="3" px="5">
@@ -21,7 +23,7 @@ const NavBar = () => {
           icon={<Image w="70%" onClick={onToggle} m="-5" src={hamburger} />}
         />
         <Spacer />
-        <IconButton icon={<FaSun />} />
+        <IconButton onClick={toggleColorMode} icon={<FaSun />} />
       </HStack>
       <NavMenu isOpen={isOpen} onToggle={onToggle} />
     </>

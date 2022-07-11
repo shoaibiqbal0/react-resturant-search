@@ -1,5 +1,4 @@
 import {
-  Flex,
   HStack,
   IconButton,
   Image,
@@ -11,7 +10,6 @@ import React from "react";
 import hamburger from "../assets/hamburger.png";
 import NavMenu from "./NavMenu";
 import { FaSun, FaMoon } from "react-icons/fa";
-import { IconBase } from "react-icons/lib";
 
 const NavBar = () => {
   const { isOpen, onToggle } = useDisclosure();
@@ -27,7 +25,7 @@ const NavBar = () => {
           />
         </ScaleFade>
         <Spacer />
-        <IconButton></IconButton>
+        <IconButton size="sm" icon={<FaSun />}></IconButton>
       </HStack>
 
       <NavMenu isOpen={isOpen} onToggle={onToggle} />

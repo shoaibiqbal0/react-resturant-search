@@ -16,7 +16,7 @@ const ResultCard = ({ searchItem }) => {
 
   const badgeStyles = {
     borderRadius: "7px",
-    textTransform: "capitalize",
+
     fontWeight: "normal",
   };
 

@@ -18,7 +18,6 @@ const ResultCard = ({ searchItem }) => {
     borderRadius: "7px",
     fontSize: "0.6rem",
     textTransform: "capitalize",
-    fontWeight: "normal",
   };
 
   return (

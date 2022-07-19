@@ -8,7 +8,6 @@ const MainText = () => {
   return (
     <VStack py="1em">
       <Text
-        bgSize="cover"
         bgClip="text"
         fontSize={["4.5em", "6em", "7em"]}
         fontWeight="extrabold"
